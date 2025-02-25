@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    background-color: rgb(55, 55, 55);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.left-bar {
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%); /* Escondido por padrão */
+}
+
+.left-bar.open {
+    transform: translateX(0); /* Aparece quando .open é ativado */
+}
+header{
+    display: flex;
+    background-color: blue;
+}
