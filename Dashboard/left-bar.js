@@ -1,3 +1,4 @@
 function menu_Hamburger() {
-    document.querySelector(".left-bar").classList.toggle("open");
+    let menu = document.querySelector(".left-bar");
+    menu.classList.toggle("open");
 }

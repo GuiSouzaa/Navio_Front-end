@@ -1,21 +1,53 @@
 body{
     margin: 0;
-    background-color: rgb(55, 55, 55);
+    background-color: rgb(150, 150, 150);
     display: flex;
     flex-direction: column;
 }
 
+header{
+    width: 100%;
+    display: fixed;
+    background-color: rgb(79, 79, 79);
+    background:linear-gradient(#737373, #2D3E50)
+}
+.menu_Hamburger{
+    background-color: aliceblue;
+}
 
 .left-bar {
-    width: 250px;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 10vw; /* Ocupa toda a largura */
+    height: 100vh; /* Ocupa toda a altura */
+    background-color: #2D3E50;
+    transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
-    transform: translateX(-100%); /* Escondido por padrão */
+    z-index: 2; 
+    
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px;
+}
+.sair{/*Tentando definir uma classe para essa porcaria comecar no final da coluna*/
+    display: flex;
+   
+    background-color: floralwhite;
 }
 
 .left-bar.open {
     transform: translateX(0); /* Aparece quando .open é ativado */
 }
-header{
+
+
+.logo{
     display: flex;
-    background-color: blue;
+    font-size: 20px;
 }
