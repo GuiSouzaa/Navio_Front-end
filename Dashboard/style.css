@@ -1,6 +1,10 @@
+*{
+    font-family: "Nunito Sans", sans-serif;
+}
+
 body{
     margin: 0;
-    background-color: rgb(150, 150, 150);
+    background-color: #B5B5B5;
     display: flex;
     flex-direction: column;
 }
@@ -11,21 +15,90 @@ header{
     background-color: rgb(79, 79, 79);
     background:linear-gradient(#737373, #2D3E50)
 }
+.container {
+    
+    gap: 5px;
+    margin-left: 200px;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas flexíveis */
+    grid-auto-rows: minmax(100px, auto); /* Altura mínima de 100px, mas expande conforme necessário */
+
+    justify-content: center; /* Centraliza no eixo horizontal */
+    align-items: center; /* Centraliza no eixo vertical */
+    
+}
+
+.pedidos_efetuados{
+    margin: 20px;
+    width: 450px;
+    height: 150px;
+    background-color: #6B95FE;
+    font-size: 25px;
+    color: #ffff;
+    flex-direction: column;
+   
+}
+
+.estoque_minimo{
+    margin: 20px;
+    width: 450px;
+    height: 150px;
+    background-color: #FFCC3F;
+    font-size: 25px;
+    color: #ffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Pedidos_Concluidos{
+    margin: 20px;
+    width: 450px;
+    height: 150px;
+    background-color: #0ACD3E;
+    font-size: 25px;
+    color: #ffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Navios_operando{
+    margin: 20px;
+    width: 450px;
+    height: 150px;
+    background-color: #D0EB92;
+    font-size: 25px;
+    color: #ffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bem_vindo_texto{
+    margin-left: 200px;
+    font-size: 30px;
+    
+}
+
+
 .menu_Hamburger{
     background-color: aliceblue;
+    
 }
 
 .left-bar {
     display: flex;
-    position: fixed;
+    position: absolute;
     flex-direction: column;
     top: 0;
     left: 0;
     width: 10vw; /* Ocupa toda a largura */
     height: 100vh; /* Ocupa toda a altura */
     background-color: #2D3E50;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
+    transform: translateX(-80%);/*Altera o tamahno que a barra fecha*/
+    transition: transform 0.5s ease;
     z-index: 2; 
     
 }
@@ -35,11 +108,14 @@ header{
     flex-direction: column;
     gap: 10px;
     margin: 15px;
+    text-decoration: none;
+    color: #ffff;
+    
 }
 .sair{/*Tentando definir uma classe para essa porcaria comecar no final da coluna*/
     display: flex;
    
-    background-color: floralwhite;
+    /*background-color: floralwhite;*/
 }
 
 .left-bar.open {
