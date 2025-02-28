@@ -11,22 +11,31 @@ body{
 
 header{
     width: 100%;
-    display: fixed;
+    height: 60px;
+    display: flex;
     background-color: rgb(79, 79, 79);
     background:linear-gradient(#737373, #2D3E50)
 }
+
+.linha {
+    width: 100%;
+    height: 2px;
+    background-color: #000000a9;
+    margin: 58px 0;
+}
+
 .container {
     
-    gap: 5px;
-    margin-left: 200px;
-    margin-top: 70px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas flexíveis */
-    grid-auto-rows: minmax(100px, auto); /* Altura mínima de 100px, mas expande conforme necessário */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    width: calc(100% - 10vw); /* Considera a barra lateral */
+    max-width: 1200px; /* Mantém os quadrados mais centralizados */
+    margin: 0 auto; /* Centraliza na tela */
+    padding: 20px;
+    transition: width 0.5s ease;
 
-    justify-content: center; /* Centraliza no eixo horizontal */
-    align-items: center; /* Centraliza no eixo vertical */
-    
 }
 
 .pedidos_efetuados{
@@ -37,7 +46,11 @@ header{
     font-size: 25px;
     color: #ffff;
     flex-direction: column;
-   
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+
 }
 
 .estoque_minimo{
@@ -50,6 +63,8 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    display: flex; 
+    
 }
 
 .Pedidos_Concluidos{
@@ -62,6 +77,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    display: flex; 
 }
 
 .Navios_operando{
@@ -74,11 +90,15 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    display: flex; 
+
 }
 
 .bem_vindo_texto{
-    margin-left: 200px;
-    font-size: 30px;
+    margin: 50px;
+    color: #ffff;
+    margin-left: 180px;
+    font-size: 20px;
     
 }
 
@@ -103,7 +123,7 @@ header{
     
 }
 
-.infos{
+.infos a{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -112,8 +132,12 @@ header{
     color: #ffff;
     
 }
+.infos a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efeito ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+}
 .sair{/*Tentando definir uma classe para essa porcaria comecar no final da coluna*/
-    display: flex;
+    margin: auto;
    
     /*background-color: floralwhite;*/
 }
@@ -127,3 +151,6 @@ header{
     display: flex;
     font-size: 20px;
 }
+
+
+
